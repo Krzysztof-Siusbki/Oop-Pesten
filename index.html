@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesten - Card Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="game-container">
+        <!-- Notification Overlay -->
+        <div id="turn-indicator" class="hidden">Speler 0</div>
+
+        <!-- Players -->
+        <!-- Player 1 (Left) -->
+        <div id="player-1" class="player-area left">
+            <div class="player-name">Player 1</div>
+            <div class="hand"></div>
+        </div>
+
+        <!-- Player 2 (Top) -->
+        <div id="player-2" class="player-area top">
+            <div class="player-name">Player 2</div>
+            <div class="hand"></div>
+        </div>
+
+        <!-- Player 3 (Right) -->
+        <div id="player-3" class="player-area right">
+            <div class="player-name">Player 3</div>
+            <div class="hand"></div>
+        </div>
+
+        <!-- Player 0 (Bottom - User) -->
+        <div id="player-0" class="player-area bottom active">
+            <div class="player-name">Player 0 (You)</div>
+            <div class="hand"></div>
+        </div>
+
+        <!-- Center Table -->
+        <div id="table">
+            <div id="deck-container">
+                <div id="deck" class="card-stack">
+                    <div class="card-back"></div>
+                </div>
+                <div class="label">Deck</div>
+            </div>
+
+            <div id="discard-container">
+                <div id="discard-pile" class="card-stack">
+                    <!-- Cards will go here -->
+                </div>
+                <div class="label">Aflegstapel</div>
+            </div>
+
+            <!-- Direction Indicator -->
+            <div id="direction-indicator" class="clockwise">↻</div>
+        </div>
+
+        <!-- Win Overlay -->
+        <div id="win-overlay" class="hidden">
+            <div class="win-content">
+                <h1 id="winner-text">Speler X Heeft Gewonnen!</h1>
+                <button id="restart-btn" onclick="location.reload()">Opnieuw Spelen</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js" type="module"></script>
+</body>
+
+</html>
